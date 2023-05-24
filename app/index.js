@@ -1,11 +1,11 @@
-import { Text, View, TouchableOpacity, Touchable } from "react-native";
+import { Text, View, TouchableOpacity, Touchable,StyleSheet } from "react-native";
 import { useRouter, Link } from "expo-router";
 
 const Home = () => {
   const router = useRouter();
   return (
-    <View>
-      <Text>Home</Text>
+    <View title="home" style={styles.container}> 
+      <Text style={styles.text}>Home</Text>
       
       <Link href="/createproduct">Create Product</Link>
 
@@ -13,5 +13,17 @@ const Home = () => {
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  container:{
+    flex: 1,
+    backgroundColor: "black",
+    alignItems: "center",
+    color: "white",
+  }, 
+  text:{
+    color: "white",
+  }
+})
 
 export default Home;
