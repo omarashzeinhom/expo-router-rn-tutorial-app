@@ -22,7 +22,6 @@ const Products = () =>{
       {key: "Product 5",
          price: 50
       },
-      
       ]}
       renderItem={({item})=> <Text style={styles.text}>{item.key}</Text>}
       />
